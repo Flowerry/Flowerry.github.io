@@ -165,61 +165,61 @@
     
     <div class="content" v-pre>
         <p>Now, we believe every OIer can write a code of A+B problem very easily.</p>
-<pre><code class="C++">#include&lt;bits/stdc++.h&gt;
-using namespace std;
-int main()&#123;
-    int a,b;
+<pre class="highlight"><code class="C++"><span class="hljs-meta">#<span class="hljs-keyword">include</span><span class="hljs-string">&lt;bits/stdc++.h&gt;</span></span>
+<span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;
+<span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span>&#123;
+    <span class="hljs-type">int</span> a,b;
     cin&gt;&gt;a&gt;&gt;b;
     cout&lt;&lt;a+b;
 &#125;
 </code></pre>
-<p>So easy,isn’t it? But if I say there are many problems in this code, can you believe?</p>
+<p>So easy,isn't it? But if I say there are many problems in this code, can you believe?</p>
 <p>First,do you truly end this program? Where is your <code>return 0</code>?</p>
-<pre><code class="C++">#include&lt;bits/stdc++.h&gt;
-using namespace std;
-int main()&#123;
-    int a,b;
+<pre class="highlight"><code class="C++"><span class="hljs-meta">#<span class="hljs-keyword">include</span><span class="hljs-string">&lt;bits/stdc++.h&gt;</span></span>
+<span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;
+<span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span>&#123;
+    <span class="hljs-type">int</span> a,b;
     cin&gt;&gt;a&gt;&gt;b;
     cout&lt;&lt;a+b;
-    return 0;
+    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
 &#125;
 </code></pre>
 <p>Second,do you create a variable to store the answer?</p>
 <p>Maybe you think it is not necessary. But it is. As you see, <code>a</code> and <code>b</code> are both integers. If  the value of <code>a+b</code> is greater than 2147483647,or less than -2147483648,the output will be wrong. So we can create a variable to store the answer.</p>
-<pre><code class="C++">#include&lt;bits/stdc++.h&gt;
-using namespace std;
-int main()&#123;
-    int a,b;
+<pre class="highlight"><code class="C++"><span class="hljs-meta">#<span class="hljs-keyword">include</span><span class="hljs-string">&lt;bits/stdc++.h&gt;</span></span>
+<span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;
+<span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span>&#123;
+    <span class="hljs-type">int</span> a,b;
     cin&gt;&gt;a&gt;&gt;b;
-    long long answer=(long long)(a+b);
+    <span class="hljs-type">long</span> <span class="hljs-type">long</span> answer=(<span class="hljs-type">long</span> <span class="hljs-type">long</span>)(a+b);
     cout&lt;&lt;answer;
-    return 0;
+    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
 &#125;
 </code></pre>
 <p>Third,do you think the input and the output is too slow?If so,we can change our way to input or output.</p>
-<pre><code class="C++">#include&lt;bits/stdc++.h&gt;
-using namespace std;
-int main()&#123;
-    int a,b;
-    scanf(&quot;%d%d&quot;,&amp;a,&amp;b);
-    long long answer=(long long)(a+b);
-    printf(&quot;%lld&quot;,answer);
-    return 0;
+<pre class="highlight"><code class="C++"><span class="hljs-meta">#<span class="hljs-keyword">include</span><span class="hljs-string">&lt;bits/stdc++.h&gt;</span></span>
+<span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;
+<span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span>&#123;
+    <span class="hljs-type">int</span> a,b;
+    <span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%d%d&quot;</span>,&amp;a,&amp;b);
+    <span class="hljs-type">long</span> <span class="hljs-type">long</span> answer=(<span class="hljs-type">long</span> <span class="hljs-type">long</span>)(a+b);
+    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;%lld&quot;</span>,answer);
+    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
 &#125;
 </code></pre>
 <p>or</p>
-<pre><code class="C++">#include&lt;bits/stdc++.h&gt;
-using namespace std;
-int main()&#123;
-    std::ios::sync_with_stdio(false);
-    int a,b;
+<pre class="highlight"><code class="C++"><span class="hljs-meta">#<span class="hljs-keyword">include</span><span class="hljs-string">&lt;bits/stdc++.h&gt;</span></span>
+<span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;
+<span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span>&#123;
+    std::ios::<span class="hljs-built_in">sync_with_stdio</span>(<span class="hljs-literal">false</span>);
+    <span class="hljs-type">int</span> a,b;
     cin&gt;&gt;a&gt;&gt;b;
-    long long answer=(long long)(a+b);
+    <span class="hljs-type">long</span> <span class="hljs-type">long</span> answer=(<span class="hljs-type">long</span> <span class="hljs-type">long</span>)(a+b);
     cout&lt;&lt;answer;
-    return 0;
+    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
 &#125;
 </code></pre>
-<p>They are the optimizations of A+B problem. But there are many other optimization ways can’t show out at this problem. I will tell you some of them next time.Bye!</p>
+<p>They are the optimizations of A+B problem. But there are many other optimization ways can't show out at this problem. I will tell you some of them next time.Bye!</p>
 
     </div>
     
