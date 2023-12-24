@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8" />
-    <title>风起云涌,花落梦息</title>
+    <title> | 风起云涌,花落梦息</title>
     <meta name="author" content="Flowerry" />
     <meta name="description" content="" />
     <meta name="keywords" content="" />
@@ -36,7 +36,9 @@
 
 
 
-<script src="/js/lib/home.js"></script>
+
+
+
 
 <link rel="stylesheet" href="/css/main.css" />
 
@@ -146,32 +148,11 @@
 </transition>
 
         <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
-            <div id="home-head">
-    <div id="home-background" ref="homeBackground" data-images="/images/background.jpg"></div>
-    <div id="home-info" @click="homeClick">
-        <span class="loop"></span>
-        <span class="loop"></span>
-        <span class="loop"></span>
-        <span class="loop"></span>
-        <span class="info">
-            <div class="wrap">
-                <h1>风起云涌,花落梦息</h1>
-                <h3></h3>
-                <h5></h5>
-            </div>
-        </span>
+            <div class="article">
+    <div>
+        <h1></h1>
     </div>
-</div>
-<div id="home-posts-wrap" true ref="homePostsWrap">
-    <div id="home-posts">
-        
-
-<div class="post">
-    <a href="/2023/12/24/triangle-function/">
-        <h2 class="post-title"></h2>
-    </a>
-    <div class="category-and-date">
-        
+    <div class="info">
         <span class="date">
             <span class="icon">
                 <i class="fa-solid fa-calendar fa-fw"></i>
@@ -181,10 +162,9 @@
         
         
     </div>
-    <div class="description">
-        <div class="content" v-pre>
-            
-            <h1 id="三角函数-学习笔记"><a href="#三角函数-学习笔记" class="headerlink" title="三角函数 学习笔记"></a>三角函数 学习笔记</h1><h2 id="1-三角函数的定义"><a href="#1-三角函数的定义" class="headerlink" title="1.三角函数的定义"></a>1.三角函数的定义</h2><p><img src="https://s2.loli.net/2023/12/17/GqzhT2F654UWmBA.png"></p>
+    
+    <div class="content" v-pre>
+        <h1 id="三角函数-学习笔记"><a href="#三角函数-学习笔记" class="headerlink" title="三角函数 学习笔记"></a>三角函数 学习笔记</h1><h2 id="1-三角函数的定义"><a href="#1-三角函数的定义" class="headerlink" title="1.三角函数的定义"></a>1.三角函数的定义</h2><p><img src="https://s2.loli.net/2023/12/17/GqzhT2F654UWmBA.png"></p>
 <p>如上图，在单位圆中，$\alpha$ 的终边与单位圆交于 $A$，则有:</p>
 <p>$\sin \alpha&#x3D;AG$，即 $A$ 的纵坐标；</p>
 <p>$\cos \alpha&#x3D;AF$，即 $A$ 的横坐标；</p>
@@ -269,183 +249,13 @@
 <p>函数 $y&#x3D;k\cos(\omega x+\phi)$ 的单调递减区间：$[\frac{k\pi-\phi}{\omega},\frac{(k+1)\pi-\phi}{\omega}](k\in{k|k\equiv0(\mod 2)})$</p>
 <h4 id="2-奇偶性"><a href="#2-奇偶性" class="headerlink" title="2.奇偶性"></a>2.奇偶性</h4><p>直接由诱导公式<br>$$<br>\sin(-x)&#x3D;-\sin x \<br>\cos(-x)&#x3D;\cos x<br>$$<br>得到，<strong>正弦函数是奇函数，余弦函数是偶函数。</strong></p>
 
-            
-        </div>
     </div>
-    <div class="post-tags">
-        
-        
-        
-    </div>
-    <a href="/2023/12/24/triangle-function/" class="go-post">阅读全文</a>
-</div>
-
-<div class="post">
-    <a href="/2023/10/22/Start-keeping-good-coding-habits-from-A-B-Problem/">
-        <h2 class="post-title">Start keeping good coding habits from A+B Problem</h2>
-    </a>
-    <div class="category-and-date">
-        
-        <span class="date">
-            <span class="icon">
-                <i class="fa-solid fa-calendar fa-fw"></i>
-            </span>
-            2023/10/22
-        </span>
-        
-        
-    </div>
-    <div class="description">
-        <div class="content" v-pre>
-            
-            <p>Now, we believe every OIer can write a code of A+B problem very easily.</p>
-<pre><code class="C++">#include&lt;bits/stdc++.h&gt;
-using namespace std;
-int main()&#123;
-    int a,b;
-    cin&gt;&gt;a&gt;&gt;b;
-    cout&lt;&lt;a+b;
-&#125;
-</code></pre>
-<p>So easy,isn’t it? But if I say there are many problems in this code, can you believe?</p>
-<p>First,do you truly end this program? Where is your <code>return 0</code>?</p>
-<pre><code class="C++">#include&lt;bits/stdc++.h&gt;
-using namespace std;
-int main()&#123;
-    int a,b;
-    cin&gt;&gt;a&gt;&gt;b;
-    cout&lt;&lt;a+b;
-    return 0;
-&#125;
-</code></pre>
-<p>Second,do you create a variable to store the answer?</p>
-<p>Maybe you think it is not necessary. But it is. As you see, <code>a</code> and <code>b</code> are both integers. If  the value of <code>a+b</code> is greater than 2147483647,or less than -2147483648,the output will be wrong. So we can create a variable to store the answer.</p>
-<pre><code class="C++">#include&lt;bits/stdc++.h&gt;
-using namespace std;
-int main()&#123;
-    int a,b;
-    cin&gt;&gt;a&gt;&gt;b;
-    long long answer=(long long)(a+b);
-    cout&lt;&lt;answer;
-    return 0;
-&#125;
-</code></pre>
-<p>Third,do you think the input and the output is too slow?If so,we can change our way to input or output.</p>
-<pre><code class="C++">#include&lt;bits/stdc++.h&gt;
-using namespace std;
-int main()&#123;
-    int a,b;
-    scanf(&quot;%d%d&quot;,&amp;a,&amp;b);
-    long long answer=(long long)(a+b);
-    printf(&quot;%lld&quot;,answer);
-    return 0;
-&#125;
-</code></pre>
-<p>or</p>
-<pre><code class="C++">#include&lt;bits/stdc++.h&gt;
-using namespace std;
-int main()&#123;
-    std::ios::sync_with_stdio(false);
-    int a,b;
-    cin&gt;&gt;a&gt;&gt;b;
-    long long answer=(long long)(a+b);
-    cout&lt;&lt;answer;
-    return 0;
-&#125;
-</code></pre>
-<p>They are the optimizations of A+B problem. But there are many other optimization ways can’t show out at this problem. I will tell you some of them next time.Bye!</p>
-
-            
-        </div>
-    </div>
-    <div class="post-tags">
-        
-        
-        
-    </div>
-    <a href="/2023/10/22/Start-keeping-good-coding-habits-from-A-B-Problem/" class="go-post">阅读全文</a>
-</div>
-
-<div class="post">
-    <a href="/2023/10/15/hello-world/">
-        <h2 class="post-title">Hello World</h2>
-    </a>
-    <div class="category-and-date">
-        
-        <span class="date">
-            <span class="icon">
-                <i class="fa-solid fa-calendar fa-fw"></i>
-            </span>
-            2023/10/15
-        </span>
-        
-        
-    </div>
-    <div class="description">
-        <div class="content" v-pre>
-            
-            <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre><code class="bash">$ hexo new &quot;My New Post&quot;
-</code></pre>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre><code class="bash">$ hexo server
-</code></pre>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre><code class="bash">$ hexo generate
-</code></pre>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre><code class="bash">$ hexo deploy
-</code></pre>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-
-            
-        </div>
-    </div>
-    <div class="post-tags">
-        
-        
-        
-    </div>
-    <a href="/2023/10/15/hello-world/" class="go-post">阅读全文</a>
-</div>
-
-
-        <div class="page-current">
     
-    <span class="current">1</span>
     
     
     
     
-</div>
-
-    </div>
     
-    <div id="home-card">
-        <div id="card-style">
-    <div id="card-div">
-        <div class="avatar">
-            <img src="/images/avatar.jpg" alt="avatar" />
-        </div>
-        <div class="name">Flowerry</div>
-        <div class="description">
-            <p>Description<br>…</p>
-
-        </div>
-        
-        
-        <div class="friend-links">
-            
-            <div class="friend-link">
-                <a target="_blank" rel="noopener" href="https://argvchs.github.io">Argvchs</a>
-            </div>
-            
-        </div>
-        
-    </div>
-</div>
-
-    </div>
     
 </div>
 
@@ -477,6 +287,12 @@ int main()&#123;
         
     </div>
     <script src="/js/main.js"></script>
+    
+    
+
+
+
+
     
 </body>
 </html>
